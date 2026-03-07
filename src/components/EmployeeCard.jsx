@@ -42,7 +42,6 @@ const EmployeeCard = ({ employee }) => {
       id={cardId}
       className="print-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden group"
     >
-      {/* Card Header */}
       <div className={`bg-gradient-to-r ${gradient} p-5 flex items-center gap-4`}>
         <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white text-xl font-bold shadow-inner">
           {initials}
@@ -54,16 +53,12 @@ const EmployeeCard = ({ employee }) => {
           </span>
         </div>
       </div>
-
-      {/* Card Body */}
       <div className="p-5 space-y-3">
         <InfoRow icon={<Mail size={15} className="text-blue-500" />} label="Email" value={email} />
         <InfoRow icon={<Phone size={15} className="text-green-500" />} label="Phone" value={phone} />
         <InfoRow icon={<Globe size={15} className="text-purple-500" />} label="Website" value={website} />
         <InfoRow icon={<Building2 size={15} className="text-orange-500" />} label="Company" value={company.name} />
       </div>
-
-      {/* Actions */}
       <div className="no-print px-5 pb-5 flex gap-2">
         <button
           onClick={handlePrint}

@@ -27,7 +27,6 @@ const App = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        {/* Stats Banner */}
         {!loading && !error && (
           <div className="mb-6 text-center">
             <p className="text-blue-300 text-sm tracking-widest uppercase font-semibold">
@@ -69,8 +68,6 @@ const App = () => {
           </div>
         )}
       </main>
-
-      {/* Footer */}
       <footer className="text-center py-6 text-slate-500 text-xs">
         © 2026 Employee Directory 
       </footer>

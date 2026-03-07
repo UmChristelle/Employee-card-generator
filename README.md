@@ -3,7 +3,7 @@
 A dynamic React application that fetches and displays employee data from a public API with search, sort, print, and download features.
 
 ## Live Demo
-[Add deployed link here]
+[https://employee-card-generator-delta.vercel.app/]
 
 ## Tech Stack
 - React + Vite
