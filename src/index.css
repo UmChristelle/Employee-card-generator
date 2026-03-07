@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@media print {
+  .no-print { display: none !important; }
+  .print-card { break-inside: avoid; page-break-inside: avoid; }
+  body { background: white; }
+}
