@@ -1,5 +1,4 @@
 import html2canvas from "html2canvas";
-import { jsPDF } from "jspdf";
 
 export const downloadAsImage = async (elementId, fileName) => {
   const element = document.getElementById(elementId);
@@ -14,11 +13,28 @@ export const downloadAsPDF = async (elementId, fileName) => {
   const element = document.getElementById(elementId);
   const canvas = await html2canvas(element, { scale: 2, useCORS: true });
   const imgData = canvas.toDataURL("image/png");
-  const pdf = new jsPDF({ 
-    orientation: "portrait", 
-    unit: "px", 
-    format: [canvas.width, canvas.height] 
-  });
-  pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
-  pdf.save(`${fileName}.pdf`);
+
+  const win = window.open("", "_blank");
+  win.document.write(`
+    <html>
+      <head>
+        <title>${fileName}</title>
+        <style>
+          body { margin: 0; }
+          img { width: 100%; }
+          @media print { body { margin: 0; } }
+        </style>
+      </head>
+      <body>
+        <img src="${imgData}" />
+        <script>
+          window.onload = function() {
+            window.print();
+            window.onafterprint = function() { window.close(); };
+          }
+        </script>
+      </body>
+    </html>
+  `);
+  win.document.close();
 };
