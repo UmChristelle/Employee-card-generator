@@ -1,17 +1,17 @@
-# 🏢 Employee Card Generator
+#  Employee Card Generator
 
 A dynamic React application that fetches and displays employee data from a public API with search, sort, print, and download features.
 
-## 🚀 Live Demo
+## Live Demo
 [Add deployed link here]
 
-## 🛠 Tech Stack
+## Tech Stack
 - React + Vite
 - Tailwind CSS
 - html2canvas + jsPDF
 - Lucide React Icons
 
-## ✨ Features
+## Features
 - Fetches data from JSONPlaceholder API
 - Real-time search by name or email
 - Sort by name or company
@@ -20,7 +20,7 @@ A dynamic React application that fetches and displays employee data from a publi
 - Download cards as PNG or PDF
 - Fully responsive grid layout
 
-## 📦 Installation
+## Installation
 ```bash
 npm install
 npm run dev
